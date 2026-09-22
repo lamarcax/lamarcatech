@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamarca Soluções | Suporte Avançado e Tecnologia</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #0d9488;
+            --accent-hover: #0f766e;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            color: #99f6e4;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        .badge-mode {
+            display: inline-block;
+            background: rgba(13, 148, 136, 0.2);
+            color: #2dd4bf;
+            border: 1px solid rgba(45, 212, 191, 0.4);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #22bf5b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border-color: var(--accent);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .mode-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 50px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .mode-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .mode-box h4 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="badge-mode">💻 Atendimento Presencial & Remoto</div>
+        <h1>Lamarca Soluções</h1>
+        <p>Especialista em suporte técnico avançado, reparo de placas, recuperação de dados e criação de presença digital.</p>
+        <a href="https://wa.me/5588998102262?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento!" class="btn-whatsapp" target="_blank">📲 Solicitar Orçamento no WhatsApp</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Nossos Serviços Especializados</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>⚡ Reparo de Placa-Mãe & Hardware</h3>
+                <p>Diagnóstico avançado e conserto a nível de componente para placas-mãe de notebooks e desktops. Soluções precisas e seguras para salvar seu equipamento.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>💻 Manutenção de Notebooks</h3>
+                <p>Limpeza preventiva profunda, troca de pasta térmica de alta performance, substituição de telas, teclados, baterias e melhorias de desempenho (Upgrades).</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🔄 Formatação & Recuperação de Dados</h3>
+                <p>Restauração completa de sistemas operacionais (Windows/Linux), remoção de vírus e resgate seguro de arquivos importantes perdidos ou corrompidos.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>⚙️ Instalação de Sistemas e Softwares</h3>
+                <p>Configuração completa de drivers, programas essenciais e softwares profissionais. <strong>Serviço com opção de atendimento remoto rápido!</strong></p>
+            </div>
+
+            <div class="service-card">
+                <h3>🌐 Criação de Sites Profissionais</h3>
+                <p>Desenvolvimento de páginas modernas, rápidas e responsivas (Landing Pages e sites institucionais) para destacar o seu negócio na internet.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🎬 Vídeos para Redes sociais</h3>
+                <p>Edição, roteiros e produção de conteúdo visual dinâmico voltado para engajar o seu público e impulsionar suas marcas nas redes sociais.</p>
+            </div>
+        </div>
+
+        <div class="mode-section">
+            <div class="mode-box">
+                <h4>🏠 Atendimento Presencial</h4>
+                <p>Ideal para reparos físicos complexos, soldas em placas-mãe, trocas de peças e manutenções profundas em computadores e notebooks.</p>
+            </div>
+            <div class="mode-box">
+                <h4>🌐 Atendimento Remoto</h4>
+                <p>Prático e ágil para formatações lógicas, remoção de vírus, instalação de softwares e soluções de configuração em sistemas operacionais à distância.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Lamarca Soluções. Todos os direitos reservados. Juazeiro do Norte - CE.</p>
+    </footer>
+
+</body>
+</html>
