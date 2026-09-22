@@ -27,11 +27,22 @@
             line-height: 1.6;
         }
 
+        /* --- CABEÇALHO --- */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-header {
+            max-width: 220px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
 
         header h1 {
@@ -91,6 +102,40 @@
             color: var(--primary);
         }
 
+        /* --- SEÇÃO SOBRE O ESPECIALISTA --- */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-content h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- GRID DE SERVIÇOS --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,44 +171,88 @@
             font-size: 0.95rem;
         }
 
+        /* --- SEÇÃO DE ATENDIMENTO E BANCADA --- */
         .mode-section {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 40px;
             margin-top: 50px;
             border: 1px solid #e2e8f0;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-around;
-            text-align: center;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
-        .mode-box {
+        .mode-content {
             flex: 1;
-            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .mode-box h4 {
             color: var(--accent);
-            font-size: 1.2rem;
-            margin-bottom: 8px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
+        .mode-box p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .repair-img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- RODAPÉ --- */
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             color: var(--text-light);
             font-size: 0.9rem;
             border-top: 1px solid #e2e8f0;
             margin-top: 60px;
             background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-footer {
+            max-width: 120px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        /* --- RESPONSIVIDADE (CELULARES) --- */
+        @media (max-width: 768px) {
+            .about-section, .mode-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+            .about-img, .repair-img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- Logo da Empresa no Topo -->
+        <img src="Generating_tech_company_logo_design_2K_20260922153256.jpeg" alt="Lamarca Soluções Logo" class="logo-header">
+        
         <div class="badge-mode">💻 Atendimento Presencial & Remoto</div>
         <h1>Lamarca Soluções</h1>
         <p>Especialista em suporte técnico avançado, reparo de placas, recuperação de dados e criação de presença digital.</p>
@@ -171,6 +260,17 @@
     </header>
 
     <div class="container">
+        
+        <!-- Seção: Sobre César Lamarca -->
+        <div class="about-section">
+            <img src="Modify_man_into_IT_specialist_2K_20260922152845.jpeg" alt="César Lamarca Peregrino - Técnico e CEO" class="about-img">
+            <div class="about-content">
+                <h2>O Especialista por Trás da Tela</h2>
+                <p>Prazer, eu sou <strong>César Lamarca Peregrino</strong>, técnico especializado, CEO da Lamarca Soluções e apaixonado por resolver problemas tecnológicos.</p>
+                <p>Com vasta experiência prática em manutenção avançada e análise de TI de nível 2, meu objetivo é oferecer um serviço transparente, rápido e definitivo. Desde o reparo complexo da placa-mãe do seu notebook até a criação do site do seu negócio: aqui você encontra soluções completas e de confiança.</p>
+            </div>
+        </div>
+
         <h2 class="section-title">Nossos Serviços Especializados</h2>
         
         <div class="services-grid">
@@ -200,24 +300,32 @@
             </div>
 
             <div class="service-card">
-                <h3>🎬 Vídeos para Redes sociais</h3>
+                <h3>🎬 Vídeos para Redes Sociais</h3>
                 <p>Edição, roteiros e produção de conteúdo visual dinâmico voltado para engajar o seu público e impulsionar suas marcas nas redes sociais.</p>
             </div>
         </div>
 
+        <!-- Seção: Modalidades de Atendimento + Foto da Bancada -->
         <div class="mode-section">
-            <div class="mode-box">
-                <h4>🏠 Atendimento Presencial</h4>
-                <p>Ideal para reparos físicos complexos, soldas em placas-mãe, trocas de peças e manutenções profundas em computadores e notebooks.</p>
+            <div class="mode-content">
+                <div class="mode-box">
+                    <h4>🏠 Atendimento Presencial</h4>
+                    <p>Ideal para reparos físicos complexos, soldas em placas-mãe, trocas de peças e manutenções profundas em computadores e notebooks direto na bancada laboratorial.</p>
+                </div>
+                <div class="mode-box">
+                    <h4>🌐 Atendimento Remoto</h4>
+                    <p>Prático e ágil para formatações lógicas, remoção de vírus, instalação de softwares e soluções de configuração em sistemas operacionais à distância.</p>
+                </div>
             </div>
-            <div class="mode-box">
-                <h4>🌐 Atendimento Remoto</h4>
-                <p>Prático e ágil para formatações lógicas, remoção de vírus, instalação de softwares e soluções de configuração em sistemas operacionais à distância.</p>
-            </div>
+            <!-- Imagem da Bancada de Reparo -->
+            <img src="Technician_disassembling_gaming_laptop_2K_20260922152459.jpeg" alt="Técnico realizando reparo em notebook na bancada" class="repair-img">
         </div>
+
     </div>
 
     <footer>
+        <!-- Logo no Rodapé -->
+        <img src="Generating_tech_company_logo_design_2K_20260922153256.jpeg" alt="Lamarca Soluções Logo" class="logo-footer">
         <p>&copy; 2026 Lamarca Soluções. Todos os direitos reservados. Juazeiro do Norte - CE.</p>
     </footer>
 
