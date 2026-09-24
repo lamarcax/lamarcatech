@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lamarcax.github.io/lamarcatech/sitemap.xml
